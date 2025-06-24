@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reference Projects</title>
+</head>
+<body>
+    <h1>Reference Projects</h1>
+    <ul>
+        {% for project in projects %}
+            <li>
+                <strong>{{ project.title }}</strong><br>
+                Client: {{ project.client }}<br>
+                Value: {{ project.value }}<br>
+                Location: {{ project.location }}<br>
+                Date: {{ project.date }}<br>
+                <em>{{ project.description }}</em>
+            </li>
+        {% empty %}
+            <li>No projects available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
